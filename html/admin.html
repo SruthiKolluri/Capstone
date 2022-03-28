@@ -1,3 +1,433 @@
 <!DOCTYPE html>
-<h1>Admin Dashboard</h1>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Navigation Start-->
+
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-2 navigation px-0">
+
+                <!-- Navbar Start-->
+
+                <div class="container-fluid p-0">
+                    <nav class="nav">
+                        <button class="btn" style="width: 98%;"><span class="fa-solid fa-home"></span>Dashboard</button>
+                        <button class="btn" style="width: 98%;"><span
+                                class="fa-solid fa-chalkboard-user"></span>Faculty</button>
+                        <button class="btn" style="width: 98%;"><span class="fa-solid fa-file"></span>Reports</button>
+                        <button class="btn" style="width: 98%;"><span class="fa-solid fa-users"></span>Users</button>
+                        <button class="btn" style="width: 98%;"><span
+                                class="fa-solid fa-circle-xmark"></span>Logout</button>
+                    </nav>
+                </div>
+
+                <!-- Navbar End-->
+            </div>
+
+            <!-- Dashboard Start -->
+            <div class="col">
+
+                <div class="dashboard" style="padding: 0.1em 0.2em;margin: 0.3em;">
+
+                    <div class="inputFields">
+
+                        <input class="form-control" style="padding: 0.1em 0.2em;margin: 0.5em;" type="search"
+                            placeholder="Search" aria-label="Search" />
+
+                        <template id="addTemplate"> </template>
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal"
+                            style="padding: 0.1em 0.4em;margin: 0.5em;">Add</button>
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateModal"
+                            style="padding: 0.1em 0.4em;margin: 0.5em;">Update</button>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                            style="padding: 0.1em 0.4em;margin: 0.5em;">Delete</button>
+
+                    </div>
+
+                    <div class="facultyMain container-fluid px-0"
+                        style="padding: 0.1em 0em;margin: 0.5em 0em; background-color: #f0f0f0; border-radius: 5px; height: 200px;">
+
+
+                        <!-- here -->
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h5>SID</h5>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h5>Name</h5>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h5>Department</h5>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h5>Comments</h5>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h5>Flags</h5>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h5>Activity</h5>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>7</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>5</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Vineetha</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Vineetha</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Vineetha</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>9</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>1</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Sahithi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sahithi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sahithi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>6</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>8</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Likitha</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Likitha</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Likitha</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>1</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>3</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Sindhura</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sindhura</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sindhura</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>4</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>9</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Rajendhar</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Rajendhar</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Rajendhar</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>5</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>1</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Abhilash</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Abhilash</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Abhilash</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>9</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>2</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>2</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>3</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>2</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>3</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>2</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>3</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>2</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>3</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <h6>Sruthi</h6>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-warning"><span
+                                        class=" fa-regular fa-comments"></span><sup>2</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-danger"><span
+                                        class=" fa-regular fa-flag"></span><sup>3</sup></button>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button class=" btn btn-info"><span
+                                        class=" fa-brands fa-stack-overflow"></span></button>
+                            </div>
+                        </div>
+
+
+
+                        <!-- end -->
+
+                    </div>
+
+                    <div class="graphs container-fluid">
+
+                        <div class="row g-0">
+                            <div class="col-8">
+
+                                <div class="barGraph">
+                                    <canvas id="barChart"></canvas>
+                                </div>
+
+
+
+
+
+                            </div>
+
+                            <div class="col-4">
+
+                                <div class="pieGraph">
+                                    <canvas id="pieChart"></canvas>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Dashboard End -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navigation End-->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/admin.js"></script>
+</body>
+
 </html>
